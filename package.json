@@ -1,0 +1,33 @@
+{
+  "name": "graphql-starter",
+  "version": "1.0.0",
+  "description": "graphql-starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvasqu09/graphql-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvasqu09/graphql-starter/issues"
+  },
+  "homepage": "https://github.com/cvasqu09/graphql-starter#readme",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "apollo-server": "^2.9.5",
+    "axios": "^0.19.0",
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.5",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

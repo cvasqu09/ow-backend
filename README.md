@@ -1,1 +1,1 @@
-ow-backend
+graphql-starter
