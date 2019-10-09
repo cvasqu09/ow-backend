@@ -1,5 +1,6 @@
 import { gql } from 'apollo-server';
-const axios = require('axios').default;
+import axios from 'axios';
+import { constants } from '../constants';
 
 export const typeDef = gql`
   type Team {
@@ -16,18 +17,9 @@ export const typeDef = gql`
       divisionId: Int
       name: String
       location: String
-      players: Player
+      players: [Player]
       website: String
       placement: Int
       advantag: Int
   }
 `;
-
-export const resolvers = {
-  Query: {
-    async teams() {
-      const response = await axios.get('https://api.overwatchleague.com/v2/teams');
-      return response.data;
-    }
-  }
-};

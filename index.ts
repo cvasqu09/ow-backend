@@ -3,6 +3,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { typeDef as TeamDef } from './types/team-def';
 import { typeDef as PlayerDef } from './types/player-def';
 
+import { constants } from './constants';
 
 axios.interceptors.response.use((res) => {
   return res.data;
@@ -22,13 +23,13 @@ export const typeDefs = [rootDef, TeamDef, PlayerDef];
 export const resolvers = {
   Query: {
     async teams() {
-      const response = await axios.get('https://api.overwatchleague.com/v2/teams');
+      const response = await axios.get(`${constants.URL}/teams`);
       return response.data;
     },
 
     async team(_, {id}) {
-      console.log(id);
-      const response = await axios.get(`https://api.overwatchleague.com/v2/teams/${id}`);
+      const response = await axios.get(`${constants.URL}/teams/${id}`);
+      console.log(response.data);
       return response.data;
     }
   }
